@@ -29,9 +29,9 @@
 				<td>Jenis Kelamin</td>
 				<td>:</td>
 				<td>
-					<select name="jeniskelamin" required
+					<select name="jeniskelamin" required>
 						<option value="Laki-Laki" <?php if($data['jeniskelamin'] == 'Laki-Laki'){ echo 'selected'; }?>>Laki-Laki</option>
-						<option value="Perempuan" <?php if($data['jeniskelamin'] == 'Perempuan'){ echo 'selected'; }?>>Laki-Laki</option>
+						<option value="Perempuan" <?php if($data['jeniskelamin'] == 'Perempuan'){ echo 'selected'; }?>>Perempuan</option>
                                         </select>
 				</td>
 			</tr>
