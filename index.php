@@ -29,7 +29,7 @@
 		$query = mysqli_query($connection, "SELECT * FROM data_mahasiswa ORDER BY nim ASC");
 		
 		//cek, apakakah hasil query di atas mendapatkan hasil atau tidak (data kosong atau tidak)
-		if(mysqli_num_rows($query == 0){	//jika hasil query kosong
+		if(mysqli_num_rows($query == 0)){	//jika hasil query kosong
 			
 			echo '<tr><td colspan="6">Tidak ada data.</td></tr>'; //menampilkan 'Tidak ada data.'
 			
