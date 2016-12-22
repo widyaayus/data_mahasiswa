@@ -9,11 +9,11 @@ if(isset($_POST['tambah'])){
 	$angkatan	= $_POST['angkatan'];
         $status 	= $_POST['status'];
 	
-	$query = mysql_query("INSERT INTO data_mahasiswa VALUES('$nim', '$nama', '$jeniskelamin', '$jurusan', '$angkatan', '$status')") or die(mysql_error());
+	$query = mysqli_query($connection,"INSERT INTO data_mahasiswa VALUES('$nim', '$nama', '$jeniskelamin', '$jurusan', '$angkatan', '$status')") or die(mysql_error());
 	
 	if($query){
-		echo 'Data mahasiswa berhasil ditambahkan.';
-		echo '<a href="tambah.php">Kembali ke halaman tambah data mahasiswa.</a>';		
+		//echo 'Data mahasiswa berhasil ditambahkan.';
+		header('location:index.php');
 	}else{
 		echo 'Data mahasiswa gagal ditambahkan. ';
                 echo '<a href="tambah.php">Kembali ke halaman tambah data mahasiswa.</a>';				
