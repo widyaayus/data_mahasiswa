@@ -9,11 +9,11 @@
 	<?php
 	include('connection.php');
 	$nim = $_GET['nim'];
-	$query = mysql_query("SELECT * FROM data_mahasiswa WHERE nim='$nim'");
-	if(mysql_num_rows($query) == 0){
+	$query = mysqli_query($connection,"SELECT * FROM data_mahasiswa WHERE nim='$nim'");
+	if(mysqli_num_rows($query) == 0){
 		echo '<script>window.history.back()</script>';
 	}else{
-		$data = mysql_fetch_assoc($query);
+		$data = mysqli_fetch_assoc($query);
 	}
 	?>
 	

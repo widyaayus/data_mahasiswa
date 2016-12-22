@@ -15,7 +15,7 @@ if(isset($_POST['simpan'])){
 		header('location:index.php');
 	}else{
 		echo 'Data mahasiswa gagal diupdate.';
-		echo '<script>window.history.back()</script>'
+		echo '<script>window.history.back()</script>';
 	}
 }else{
     echo '<script>window.history.back()</script>';
