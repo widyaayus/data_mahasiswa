@@ -6,7 +6,7 @@
 <body>
 	<h2>Sistem Data Mahasiswa</h2>
 	
-	<p><a href="index.php">Beranda</a> / <a href="tambah.php">Tambah Data</a></p>
+	<a href="tambah.php">Tambah Data</a></p>
 	
 	<h3>Data Mahasiswa</h3>
 	
@@ -22,25 +22,22 @@
 		</tr>
 		
 		<?php
-		//iNclude file koneksi ke database
+		//include file connection.php
 		include('connection.php');
 		
-		//query ke database dg SELECT table DATA_MAHAsiswa diurutkan berdasarkan NIM 
-		$query = mysql_query("SELECT * FROM data_mahasiswa ORDER BY nim ASC") or die(mysql_error());
+		//query S 
+		$query = mysqli_query($connection, "SELECT * FROM data_mahasiswa ORDER BY nim ASC");
 		
 		//cek, apakakah hasil query di atas mendapatkan hasil atau tidak (data kosong atau tidak)
-		if(mysql_num_rows($query) == 0){	//ini artinya jika data hasil query di atas kosong
+		if(mysqli_num_rows($query == 0){	//jika hasil query kosong
 			
-			//jika data kosong, maka akan menampilkan row kosong
-			echo '<tr><td colspan="6">Tidak ada data.</td></tr>';
+			echo '<tr><td colspan="6">Tidak ada data.</td></tr>'; //menampilkan 'Tidak ada data.'
 			
-		}else{	//else ini artinya jika data hasil query ada (data diu database tidak kosong)
-			
-			//jika data tidak kosong, maka akan melakukan perulangan while
-			$no = 1;	//membuat variabel $no untuk membuat nomor urut
-			while($data = mysql_fetch_assoc($query)){	//perulangan while dg membuat variabel $data yang akan mengambil data di database
+		}else{	//jika hasil query tidak kosong
+		
+			$no = 1;	//variabel untuk nomor urut
+			while($data = mysqli_fetch_assoc($query)){	//perulangan sebanyak data yang didapatkan
 				
-				//menampilkan row dengan data di database
 				echo '<tr>';
 					echo '<td>'.$no.'</td>';	//menampilkan nomor urut
 					echo '<td>'.$data['nim'].'</td>';	//menampilkan data nim dari database
