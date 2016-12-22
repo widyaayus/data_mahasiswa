@@ -13,7 +13,7 @@ if(isset($_POST['tambah'])){
 	
 	if($query){
 		//echo 'Data mahasiswa berhasil ditambahkan.';
-		header(dirname( __FILE__ ).'/');
+		header('location:'.dirname( __FILE__ ).'/');
 	}else{
 		echo 'Data mahasiswa gagal ditambahkan. ';
                 echo '<a href="tambah.php">Kembali ke halaman tambah data mahasiswa.</a>';				
