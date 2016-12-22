@@ -6,7 +6,7 @@
 <body>
 	<h2>Sistem Data Mahasiswa</h2>
 	
-	<a href="tambah.php">Tambah Data</a></p>
+	<a href="tambah.php">Tambah Data Mahasiswa</a></p>
 	
 	<h3>Data Mahasiswa</h3>
 	
@@ -46,10 +46,10 @@
 					echo '<td>'.$data['jurusan'].'</td>';	//menampilkan data jurusan dari database
                                         echo '<td>'.$data['angkatan'].'</td>';	//menampilkan data angkatan dari database
                                         echo '<td>'.$data['status'].'</td>';	//menampilkan data status dari database
-					echo '<td><a href="edit.php?id='.$data['nim'].'">Edit</a> / <a href="hapus.php?id='.$data['nim'].'" onclick="return confirm(\'Hapus data mahasiswa ini?\')">Hapus</a></td>';	//menampilkan link edit dan hapus dimana tiap link terdapat GET id -> ?id=siswa_id
+					echo '<td><a href="edit_data.php?nim='.$data['nim'].'">Edit</a> / <a href="hapus_data.php?nim='.$data['nim'].'" onclick="return confirm(\'Hapus data mahasiswa ini?\')">Hapus</a></td>';	//fitur edit dan hapus
 				echo '</tr>';
 				
-				$no++;	//menambah jumlah nomor urut setiap row
+				$no++;	//increment nomor urut pada tampilan tabel
 				
 			}
 			
