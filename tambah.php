@@ -4,14 +4,10 @@
 	<title>Sistem Data Mahasiswa</title>
 </head>
 <body>
-	<h2>Data Mahasiswa</h2>
-	
-	<p><a href="index.php">Beranda</a> / <a href="tambah.php">Tambah Data</a></p>
-	
+	<h2>Sistem Data Mahasiswa</h2>
 	<h3>Tambah Data Mahasiswa</h3>
-	
 	<form action="tambah-proses.php" method="post">
-		<table cellpadding="3" cellspacing="0">
+		<table cellpadding="5" cellspacing="0">
 			<tr>
 				<td>NIM</td>
 				<td>:</td>
@@ -68,5 +64,6 @@
 			</tr>
 		</table>
 	</form>
+        <p><a href="index.php">Kembali ke halaman utama.</a></p>
 </body>
 </html>
