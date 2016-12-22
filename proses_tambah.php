@@ -12,12 +12,8 @@ if(isset($_POST['tambah'])){
 	$query = mysqli_query($connection,"INSERT INTO data_mahasiswa VALUES('$nim', '$nama', '$jeniskelamin', '$jurusan', '$angkatan', '$status')") or die(mysql_error());
 	
 	if($query){
-		echo 'Data mahasiswa berhasil ditambahkan.';
-		?>
-		<script>
-		window.location.replace("<?php echo dirname( __FILE__ ).'/' ; ?>");
-		</script>
-		<?php
+		//echo 'Data mahasiswa berhasil ditambahkan.';
+		header(dirname( __FILE__ ).'/');
 	}else{
 		echo 'Data mahasiswa gagal ditambahkan. ';
                 echo '<a href="tambah.php">Kembali ke halaman tambah data mahasiswa.</a>';				
@@ -26,4 +22,3 @@ if(isset($_POST['tambah'])){
     echo '<script>window.history.back()</script>';
 }
 ?>
-<script></script>
