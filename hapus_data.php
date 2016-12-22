@@ -3,16 +3,18 @@ if(isset($_GET['nim'])){
 	
 	include('connection.php');
 	$nim = $_GET['nim'];
-	$query = mysql_query("SELECT nim FROM siswa WHERE nim='$nim'") or die(mysql_error());
+	$query = mysqli_query($connection,"SELECT nim FROM data_mahasiswa WHERE nim='$nim'");
 	
-        if(mysql_num_rows($query) == 0){
+        if(mysqli_num_rows($query) == 0){
             echo '<script>window.history.back()</script>';
 	}else{
-            $query = mysql_query("DELETE FROM data_mahasiswa WHERE nim='$nim'");
+            $query = mysqli_query($connection,"DELETE FROM data_mahasiswa WHERE nim='$nim'");
 		if($query){
 			echo 'Data mahasiswa berhasil dihapus.';
+                        header("location:index.php");
 		}else{
 			echo 'Data mahasiswa gagal dihapus.';
+                        echo '<script>window.history.back()</script>';
 		}	
 	}
 }else{
