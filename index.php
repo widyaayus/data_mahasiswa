@@ -17,7 +17,6 @@
 			<th>Nama</th>
 			<th>Jenis Kelamin</th>
 			<th>Jurusan</th>
-			<th>Fakultas</th>
                         <th>Angkatan</th>
                         <th>Status</th>
 		</tr>
@@ -48,7 +47,6 @@
 					echo '<td>'.$data['nama'].'</td>';	//menampilkan data nama dari database
 					echo '<td>'.$data['jeniskelamin'].'</td>';	//menampilkan data jeniskelamin dari database
 					echo '<td>'.$data['jurusan'].'</td>';	//menampilkan data jurusan dari database
-                                        echo '<td>'.$data['fakultas'].'</td>';	//menampilkan data fakultas dari database
                                         echo '<td>'.$data['angkatan'].'</td>';	//menampilkan data angkatan dari database
                                         echo '<td>'.$data['status'].'</td>';	//menampilkan data status dari database
 					echo '<td><a href="edit.php?id='.$data['nim'].'">Edit</a> / <a href="hapus.php?id='.$data['nim'].'" onclick="return confirm(\'Hapus data mahasiswa ini?\')">Hapus</a></td>';	//menampilkan link edit dan hapus dimana tiap link terdapat GET id -> ?id=siswa_id
