@@ -6,7 +6,7 @@
 <body>
 	<h2>Sistem Data Mahasiswa</h2>
 	<h3>Tambah Data Mahasiswa</h3>
-	<form action="tambah-proses.php" method="post">
+	<form action="proses_tambah.php" method="post">
 		<table cellpadding="5" cellspacing="0">
 			<tr>
 				<td>NIM</td>
