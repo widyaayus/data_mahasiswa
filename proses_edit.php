@@ -8,12 +8,14 @@ if(isset($_POST['simpan'])){
         $angkatan	= $_POST['angkatan'];
         $status 	= $_POST['status'];
         
-	$query = mysql_query("UPDATE data_mahasiswa SET nama='$nama', jeniskelamin='$jeniskelamin', jurusan='$jurusan', angkatan='$angkatan', status='$status' WHERE nim='$nim'") or die(mysql_error());
+	$query = mysqli_query($connection,"UPDATE data_mahasiswa SET nama='$nama', jeniskelamin='$jeniskelamin', jurusan='$jurusan', angkatan='$angkatan', status='$status' WHERE nim='$nim'");
 	
 	if($query){
 		echo 'Data mahasiswa berhasil diupdate.';
+		header('location:index.php');
 	}else{
 		echo 'Data mahasiswa gagal diupdate.';
+		echo '<script>window.history.back()</script>'
 	}
 }else{
     echo '<script>window.history.back()</script>';
