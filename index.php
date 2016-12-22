@@ -17,8 +17,9 @@
 			<th>Nama</th>
 			<th>Jenis Kelamin</th>
 			<th>Jurusan</th>
-                        <th>Angkatan</th>
-                        <th>Status</th>
+            <th>Angkatan</th>
+            <th>Status</th>
+			<th></th>
 		</tr>
 		
 		<?php
@@ -31,7 +32,7 @@
 		//cek, apakakah hasil query di atas mendapatkan hasil atau tidak (data kosong atau tidak)
 		if(mysqli_num_rows($query) == 0){	//jika hasil query kosong
 			
-			echo '<tr><td colspan="6">Tidak ada data.</td></tr>'; //menampilkan 'Tidak ada data.'
+			echo '<tr><td colspan="8">Tidak ada data.</td></tr>'; //menampilkan 'Tidak ada data.'
 			
 		}else{	//jika hasil query tidak kosong
 		
@@ -44,8 +45,8 @@
 					echo '<td>'.$data['nama'].'</td>';	//menampilkan data nama dari database
 					echo '<td>'.$data['jeniskelamin'].'</td>';	//menampilkan data jeniskelamin dari database
 					echo '<td>'.$data['jurusan'].'</td>';	//menampilkan data jurusan dari database
-                                        echo '<td>'.$data['angkatan'].'</td>';	//menampilkan data angkatan dari database
-                                        echo '<td>'.$data['status'].'</td>';	//menampilkan data status dari database
+                    echo '<td>'.$data['angkatan'].'</td>';	//menampilkan data angkatan dari database
+                    echo '<td>'.$data['status'].'</td>';	//menampilkan data status dari database
 					echo '<td><a href="edit_data.php?nim='.$data['nim'].'">Edit</a> / <a href="hapus_data.php?nim='.$data['nim'].'" onclick="return confirm(\'Hapus data mahasiswa ini?\')">Hapus</a></td>';	//fitur edit dan hapus
 				echo '</tr>';
 				
